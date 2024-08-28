@@ -1,0 +1,763 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'engine/css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Морской бой</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <h3>Морской бой</h3>
+        </div>
+
+        <div class="icons">
+            <div class="fa-regular fa-sun" id="theme-btn"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="battlefields">
+            <div class="battlefield_self" id="battlefield_self">
+                <h6 class="label-field">Ваше поле</h6>
+                <table>
+                    <tbody id="self">
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="0" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="1" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="2" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="3" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="4" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="5" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="6" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="7" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="8" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="battle-cell-empty" data-y="9" data-x="0">
+                                <span ></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="battlefield_rival">
+                <h6 class="label-field">Поле противника</h6>
+                <table>
+                    <tbody id="rival">
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="0" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="0" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="1" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="1" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="2" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="2" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="3" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="3" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="4" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="4" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="5" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="5" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="6" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="6" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="7" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="7" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="battle-cell-empty"  data-y="8" data-x="0">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="8" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="battle-cell-empty" data-y="9" data-x="0">
+                                <span ></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="1">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="2">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="3">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="4">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="5">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="6">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="7">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="8">
+                                <span></span>
+                            </td>
+                            <td class="battle-cell-empty" data-y="9" data-x="9">
+                                <span></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="block-init">
+            <div class="init-ships">
+                <div data-id="quadruple" data-location="h" data-length="4"
+                class="ship-box port"
+                style=" width: 8.1rem;
+                        height: 2.1rem;
+                        padding-right: 0px;
+                        padding-bottom: 0px;"></div>
+                <div data-id="triple1" data-location="h" data-length="3"
+                    class="ship-box port"
+                    style=" width: 6.1rem;
+                            height: 2.1rem;
+                            padding-right: 0px;
+                            padding-bottom: 0px;"></div>
+                <div data-id="triple2" data-location="h" data-length="3"
+                    class="ship-box port"
+                    style=" width: 6.1rem;
+                            height: 2.1rem;
+                            padding-right: 0px;
+                            padding-bottom: 0px;"></div>
+                <div data-id="double1" data-location="h" data-length="2"
+                    class="ship-box port"
+                    style=" width: 4.1rem;
+                            height: 2.1rem;
+                            padding-right: 0px;
+                            padding-bottom: 0px;"></div>
+                    <div data-id="double2" data-location="h" data-length="2"
+                        class="ship-box port"
+                        style=" width: 4.1rem;
+                                height: 2.1rem;
+                                padding-right: 0px;
+                                padding-bottom: 0px;"></div>
+                    <div data-id="double3" data-location="h" data-length="2"
+                        class="ship-box port"
+                        style=" width: 4.1rem;
+                                height: 2.1rem;
+                                padding-right: 0px;
+                                padding-bottom: 0px;"></div>
+                    <div data-id="single1" data-location="h" data-length="1"
+                        class="ship-box port"
+                        style=" width: 2.1rem;
+                                height: 2.1rem;
+                                padding-right: 0px;
+                                padding-bottom: 0px;">
+                    </div>
+                    <div data-id="single2" data-location="h" data-length="1"
+                        class="ship-box port"
+                        style=" width: 2.1rem;
+                                height: 2.1rem;
+                                padding-right: 0px;
+                                padding-bottom: 0px;">
+                    </div>
+                    <div data-id="single3" data-location="h" data-length="1"
+                    class="ship-box port"
+                    style=" width: 2.1rem;
+                            height: 2.1rem;
+                            padding-right: 0px;
+                            padding-bottom: 0px;">
+                    </div>
+                    <div data-id="single4" data-location="h" data-length="1"
+                    class="ship-box port"
+                    style=" width: 2.1rem;
+                            height: 2.1rem;
+                            padding-right: 0px;
+                            padding-bottom: 0px;"></div>
+            </div>
+            <div class="btn-game">
+                <button type="button" id="btn-random-placement" class="custom-btn btn-active">Случайная расстановка</button>
+                <button type="button" id="btn-clean-sheet" class="custom-btn btn-active">С чистого листа</button>
+                <button type="button" id="btn-start-game-pc" class="custom-btn btn-active">Игра с компьютером</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>BATTLE-SHIP © 2024</h4>
+    </footer>
+</body>
+<script type="text/javascript" src="{% static 'engine/js/index.js' %}"></script>
+<script type="text/javascript" src="{% static 'engine/js/draggable.js' %}"></script>
+<script type="text/javascript" src="{% static 'engine/js/game.js' %}"></script>
+</html>

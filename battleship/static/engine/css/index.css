@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    transition: all .4s;
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+
+:root {
+    --bg-color1: #000;
+    --bg-color2: #fff;
+    --fon: #cacaca;
+    --bg-color3: #555555;
+    --bg-color4: #818181;
+    --bg-color5: #005bb1;
+    --hover-btn: #0066ff98;
+    --bg-color-missing: rgba(211, 219, 253, 0.5);
+
+}
+
+html::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color3);
+    height: 100vh;
+    text-align: center;
+}
+
+body.whitetheme {
+    background-color: var(--fon);
+}
+.whitetheme-txt {
+    color: var(--bg-color1)!important;
+}
+
+/*  start div topbar */
+
+.topbar {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color1);
+    display: flex;
+    padding: 2rem 9%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .logo {
+    color: var(--bg-color2);
+}
+
+.topbar .icons {
+    display: flex;
+    gap: .8rem;
+}
+
+.topbar .icons div {
+    width: calc(27px + (40 - 27) * ((100vw - 300px) / (1500 - 300)));
+    height: calc(27px + (40 - 27) * ((100vw - 300px) / (1500 - 300)));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--bg-color4);
+}
+
+.topbar .icons div:hover {
+    background: var(--bg-color5);
+}
+
+/*  end div topbar */
+
+
+
+/*  start div battlefields */
+.content {
+    flex: 1 0 auto;
+}
+
+h6.label-field {
+    font-size: 1.5rem;
+    color: var(--bg-color2);
+}
+
+.battlefields, .init-ships {
+    margin: 20px;
+    font-size: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 1rem 2rem;
+}
+
+.field-disabled {
+    background: rgba(161, 161, 161, 0.25);
+
+    transition: 0.2s;
+}
+
+.block-init {
+    display: flex;
+    margin: 20px;
+    font-size: 160px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.init-ships {
+    background: var(--bg-color2);
+    padding: 20px;
+    max-width: 20rem;
+    min-width: 20rem;
+    min-height: 11rem;
+    border: 2px solid #000000;
+    grid-gap: 1rem 1rem;
+}
+
+.battlefields table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid #000000;
+    margin: 0;
+    background: var(--bg-color2);
+}
+
+
+.battlefields table td {
+    position: relative;
+    min-width: 2rem;
+    min-height: 2rem;
+    height: 2rem;
+    width: 2rem;
+	padding: 0;
+    margin: 0;
+}
+
+.battle-cell-empty, .battle-cell-hit,
+.battle-cell-busy, .battle-cell-miss {
+	border: 1px solid #000000;
+}
+
+.battle-cell-busy {
+    border-color: rgba(0, 0, 255, 0.1);
+}
+
+.battle-cell-miss .missing{
+    display: block;
+    height: 5px;
+    width: 5px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: justify;
+    background: #333;
+    border-radius: 50%;
+}
+
+.battle-cell-miss {
+    background: var(--bg-color-missing);
+}
+
+.battle-cell-hit {
+    background-image: url(../img/hit.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.last-shot {
+    background-color: rgba(255, 255, 0, 0.438);
+}
+
+.possible-field {
+    background: rgba(39, 184, 39, 0.5);
+}
+
+/* end div battlefields */
+
+.btn-game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 1rem 1rem;
+}
+
+/* Button style */
+
+.custom-btn {
+    width: 150px;
+    height: 50px;
+    color: var(--bg-color2);
+    border: none;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: var(--bg-color5);
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.custom-btn-small {
+    width: 150px;
+    height: 25px;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 0;
+}
+
+
+
+.btn-active:after {
+    position: absolute;
+    content:"";
+    border-radius: 10px;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+
+.btn-active:hover {
+    background-color: var(--hover-btn);
+}
+
+.btn-active:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+.btn-active:active {
+    top: 2px;
+}
+
+.btn-disabled {
+    background-color: grey;
+}
+
+/* End button style */
+
+#end-game {
+    position: absolute;
+    z-index: 500;
+    width: 30rem;
+    height: 5rem;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 16px 14px 15px rgba(0, 0, 0, 0.46);
+    background-color: rgba(120, 154, 228, 0.9);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#statistics-ships {
+    margin: 10px;
+    font-size: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--bg-color2);
+    padding: 10px;
+    max-width: 20rem;
+    min-width: 10rem;
+    min-height: 4rem;
+    border: 2px solid #000000;
+    grid-gap: 1rem 0.5rem;
+}
+
+.statistics-ship-hit {
+    background: rgba(255, 0, 0, 0.233)!important;
+    border-color: red!important;
+}
+
+.ship-box {
+    position: absolute!important;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    margin: -1px;
+    border: 2px solid #00f;
+    background: rgba(0,0,255,.05);
+    cursor: move;
+    touch-action: none;
+}
+
+.port {
+    position: static!important;
+}
+
+
+.ui-draggable {
+    cursor: default!important
+}
+
+footer {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+  }
+
+
+/* media queries */
+
+@media (max-width: 991px) {
+    .topbar {
+        padding: 1rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #end-game {
+        width: 80vw;
+    }
+    .init-ships {
+        margin: 10px 0;
+    }
+}
+
+/* end media queries */
