@@ -1,5 +1,5 @@
 # Run guide #
-1. git clone https://github.com/Mars687p/URME
+1. git clone https://github.com/Mars687p/Battleship
 2. python -m venv env && source env/Scripts/activate.bat
 3. pip install -r requirements.txt
 4. python3 manage.py makemigrations
