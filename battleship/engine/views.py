@@ -3,4 +3,5 @@ from django.shortcuts import render
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    return render(request, 'engine/index.html')
+    context = {'table_range': range(10)}
+    return render(request, 'engine/index.html', context)
